@@ -1,0 +1,15 @@
+.Navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 20px
+}
+
+.Navbar h1 {
+  margin: 0;
+  text-align: left;
+}
+
+.Navbar a {
+  text-decoration: none;
+}

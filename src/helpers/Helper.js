@@ -1,0 +1,1 @@
+export const removeDecimals = number => number.toString().split('.')[0]

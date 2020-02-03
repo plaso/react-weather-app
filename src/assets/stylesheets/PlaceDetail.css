@@ -1,0 +1,33 @@
+.PlaceDetail .main-info {
+  display: flex;
+  align-items: center;
+}
+
+.PlaceDetail .main-info > div {
+  width: 50%;
+  text-align: center;
+}
+
+.PlaceDetail .temperature > p {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+
+.PlaceDetail .description p {
+  margin: .5rem 0;
+  text-align: center;
+}
+
+.PlaceDetail h1 {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
+.PlaceDetail .block {
+  margin: 1rem 0;
+}
