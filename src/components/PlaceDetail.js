@@ -17,8 +17,9 @@ const usePlaceWeather = (place) => {
     } catch(err) {
       if (err.response && err.response.status === 404) {
         push('/')
+      } else {
+        throw err
       }
-      throw err
     }
   }, [place, push])
 

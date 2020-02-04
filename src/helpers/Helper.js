@@ -1,1 +1,5 @@
-export const removeDecimals = number => number.toString().split('.')[0]
+export const removeDecimals = number => {
+  if (!number) throw new Error('Number is required')
+
+  return number.toString().split('.')[0]
+}
