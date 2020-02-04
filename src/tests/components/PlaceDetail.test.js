@@ -58,5 +58,7 @@ describe('PlaceDetail', () => {
     expect(queryByText('Cargando...')).not.toBeNull()
 
     await wait(() => expect(getByTestId('location').textContent).toBe('/'))
+
+    expect(WeatherService.getWeatherFromCity).toHaveBeenCalled()
   })
 })
