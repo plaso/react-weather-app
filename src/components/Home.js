@@ -22,6 +22,7 @@ const Home = () => {
     <div className="Home">
       <form onSubmit={handleSubmit}>
         <input value={search} onChange={handleChange} />
+        <button type="submit" style={{ marginLeft: '1rem' }}>Search</button>
       </form>
     </div>
   );

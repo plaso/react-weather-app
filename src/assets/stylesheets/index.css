@@ -39,6 +39,26 @@ code {
   background-color: #fff;
 }
 
+input {
+  border: 1px solid var(--c-secondary);
+  font-size: 1rem;
+  padding: 0.25rem;
+  outline: none;
+  border-radius: 0.25rem;
+}
+
+button {
+  background-color: var(--c-primary);
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
 :root {
   --c-background: #f6f6f6;
   --c-primary: #e96e50;

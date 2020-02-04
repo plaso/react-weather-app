@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 import { getWeatherFromCity } from '../services/WeatherService';
-import '../assets/stylesheets/PlaceDetail.css';
 import { removeDecimals } from '../helpers/Helper';
+import '../assets/stylesheets/PlaceDetail.css';
 
 const usePlaceWeather = (place) => {
+  const { push } = useHistory()
   const [data, setData] = useState(null)
   const unmountRef = useRef(false)
 
@@ -13,9 +15,12 @@ const usePlaceWeather = (place) => {
 
       !unmountRef.current && setData(result)
     } catch(err) {
+      if (err.response && err.response.status === 404) {
+        push('/')
+      }
       throw err
     }
-  }, [place])
+  }, [place, push])
 
   useEffect(() => () => unmountRef.current = true, [])
 
@@ -31,7 +36,8 @@ const Field = ({ field, value }) => (
 )
 
 const PlaceDetail = () => {
-  const [placeData, isLoading] = usePlaceWeather('Madrid')
+  const { name } = useParams()
+  const [placeData, isLoading] = usePlaceWeather(name)
 
   return (
     <div className="PlaceDetail">
